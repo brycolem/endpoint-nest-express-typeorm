@@ -16,7 +16,7 @@ import { Note } from './model/note';
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => ({
         type: 'postgres',
-        host: 'localhost',
+        host: 'postgres_bench',
         port: 5432,
         database: configService.get<string>('DATABASE'),
         username: configService.get<string>('DB_USER'),
